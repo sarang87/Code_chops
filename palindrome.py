@@ -41,10 +41,11 @@ def substr_palindrome(s, start , end):
     e_list = []
     # even length string
     if len(s) % 2 == 0:
-        mid = len(s)-1/2
+        mid = (len(s))/2
         for i in range(0,mid):
-            if s[mid-1] == s[mid+i+1]:
-                e_list.append(s[mid-1: mid+i+2])
+            print mid-i-1
+            if s[mid-i-1] == s[mid+i]:
+                e_list.append(s[mid-i-1: mid+i+1])
     # odd length strings
     else:
         mid = len(s) /2       
